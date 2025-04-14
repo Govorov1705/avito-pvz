@@ -1,0 +1,23 @@
+BEGIN;
+
+DROP TABLE IF EXISTS products;
+
+DROP TYPE IF EXISTS product_type;
+
+DROP TABLE IF EXISTS receptions;
+
+DROP INDEX IF EXISTS one_open_reception_per_pvz;
+
+DROP TYPE IF EXISTS reception_status;
+
+DROP TABLE IF EXISTS pvzs;
+
+DROP TYPE IF EXISTS pvz_city;
+
+DROP EXTENSION IF EXISTS pgcrypto;
+
+DROP TABLE IF EXISTS users;
+
+DROP TYPE IF EXISTS user_role;
+
+COMMIT;

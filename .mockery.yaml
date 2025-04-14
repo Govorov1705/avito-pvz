@@ -1,0 +1,10 @@
+with-expecter: true
+packages:
+  github.com/Govorov1705/avito-pvz/internal/repositories:
+    config:
+      all: True
+      recursive: True
+      filename: "mock_{{.InterfaceNameLower}}.go"
+      dir: "{{.InterfaceDir}}/mocks"
+      mockname: "{{.Mock}}{{.InterfaceName}}"
+      outpkg: "mocks"
