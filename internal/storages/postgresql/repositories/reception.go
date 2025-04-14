@@ -133,10 +133,6 @@ func (r *ReceptionRepository) Close(ctx context.Context, receptionId uuid.UUID) 
 }
 
 func (r *ReceptionRepository) ListByPvzIdsWithDateRange(ctx context.Context, pvzIds []*uuid.UUID, startDate, endDate time.Time) ([]*models.Reception, error) {
-	if len(pvzIds) == 0 {
-		return nil, errors.New("pvzIds slice can't be empty")
-	}
-
 	query := `
 		SELECT id, date_time, pvz_id, status
 		FROM receptions

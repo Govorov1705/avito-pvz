@@ -22,6 +22,7 @@ services:
       - "9090:9090"
     volumes:
       - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
 
   api:
     container_name: api
@@ -45,3 +46,4 @@ services:
 
 volumes:
   pvz_pg_data:
+  prometheus_data:
